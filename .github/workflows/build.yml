@@ -38,7 +38,7 @@ jobs:
         if: success() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.PUBLISH_WEB }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages  # Change this if deploying to a different branch
           publish_dir: ./_build
           force_orphan: true
